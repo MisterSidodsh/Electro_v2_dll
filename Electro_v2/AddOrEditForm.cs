@@ -26,7 +26,7 @@ namespace Electro_v2
 
         public AddOrEditForm(ElectricalAppliance appliance) : this()
         {
-            if (appliance != null)
+            if (appliance.GetType() == typeof(CasualAppliance))
             {
                 classComboBox.Text = appliance.GetType().ToString();
                 nameTextBox.Text = appliance.Name;
@@ -48,7 +48,7 @@ namespace Electro_v2
                     revolutionsTextBox.Enabled = false;
                     label6.Enabled = false;
                 }
-                else if (appliance.GetType() == typeof(Fan))
+               if (appliance.GetType() == typeof(Fan))
                 {
                     Fan temporaryAppliance = (Fan)appliance;
                     revolutionsTextBox.Text = temporaryAppliance.RevolutionsPerSecond.ToString();
@@ -58,8 +58,6 @@ namespace Electro_v2
                     revolutionsTextBox.Enabled = true;
                     label6.Enabled = true;
                 }
-
-            }
         }
 
         private void OkButton_Click(object sender, EventArgs e)
