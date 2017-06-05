@@ -12,17 +12,17 @@ using Electro_v2_dll;
 
 namespace Electro_v2
 {
-    public partial class Main : Form
+    public partial class Main : Form // СОЗДАЕМ КЛАСС ФОРМУ С НУЖНЫМИ КНОПОЧКАМИ
     {
-        private PowerSocket _socket = new PowerSocket();
-        public Main()
+        private PowerSocket _socket = new PowerSocket();  //СОЗДАЕШЬ РОЗЕТКУ
+        public Main() 
         {
             InitializeComponent();
         }
 
-        public void RefreshInfo()
+        public void RefreshInfo() // ОБНОВЛЕНИЕ ИНФОРМАЦИИ В СЛУЧАЕ ЧЕГО
         {
-            textBox1.Text = $"Total power: {_socket.GetTotalPower()}";
+            textBox1.Text = $"Total power: {_socket.GetTotalPower()}"; //ВЫВОД ТОТАЛЬНОЙ МОЩНОСТИ
         }
 
         private void AddButton_Click(object sender, EventArgs e) // add
