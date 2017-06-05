@@ -18,7 +18,7 @@ namespace Electro_v2_dll
             for (var i = 0; i < rand.Next(10, 50); i++)
             {
                
-                var type = rand.Next(0, 3);
+                var type = rand.Next(0, 2);
                 switch (type)
                 {
                     case 0:
